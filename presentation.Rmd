@@ -1,0 +1,65 @@
+---
+title: "Hello, Stress & Development Lab!"
+author: "John Flournoy"
+date: "1/11/2018"
+output: 
+  ioslides_presentation:
+    incremental: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+My work in graduate school has been diverse
+
+- Social 
+- Neuroscience
+- Development
+- Personality
+
+## Interests
+
+My interests are both
+
+- Substantive
+    - Adolescent, motivated decision-making
+    - Development of stable individual differences
+- Methodological
+    - Cognitive models of behavior
+    - Refined models of development
+    - Emphasis on uncertainty
+
+## Projects
+
+Four projects (and what I've learned about doing science from some of them):
+
+1. Neural correlates of empathy-motivated prosocial behavior
+2. Interactions between personality and values in adult development
+3. The Yellow Light Game and adolescent risk-taking
+4. Measuring adolescent-developing motivations
+
+# Neural correlates of empathy-motivated prosocial behavior
+
+Do individual differences in empathic concern predict future prosocial behavior? Is this mediated by "affective resonance" neural processes?
+
+## Empathy and Prosocial Behavior
+
+*Empathic concern:* Sympathy, compassion; aligned emotions _for_ another person's suffering. 
+
+Evidence of association between EC and prosocial behavior throughout development (Barr & Higgins-D’Alessandro, 2007; Brownell et 
+al., 2013; Eisenberg, 2003; Eisenberg et al., 1991; Eisenberg et al., 1987; Farrant et
+al., 2012; 
+Litvack-Miller et al., 1997)
+
+## What reactive neural processes are involved?
+
+Empathic concern is an emotional reaction that will be activated by other people's emotional expressions.
+
+Given that a neural region is functionally active in response to other people's emotions, does that functional activation explain some of the link between EC and prosocial behavior?
+
+What does a particular region's involvement tell us about this link?
+
+## 
