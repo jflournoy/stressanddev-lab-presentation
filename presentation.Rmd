@@ -147,4 +147,45 @@ Personality changes throughout adulthood. Do changes in values drive some of thi
 
 ## Measures
 
+- Personality
+    - Big five, aspects, and super-factors
+- Values 
+    - Mature values
+    - Unmitigated self interest
+    - materialism
+    - financial aspirations
+    - individualism & collectivism
 
+## Model for longitudinal change
+
+Cross-lagged panel model, but _better_:
+
+<big>The Latent Curve Model with Structured Residuals</big> (LCM-SR; Curran et al., 2013)
+
+![Growth curve with cross lagged residuals](lcmsr.png)
+
+## Why not cross-lagged panel models?
+
+Models need to account for both between- and within-person variance or risk extreme bias (Hamaker et al., 2015).
+
+```{r, out.width = "350px"}
+knitr::include_graphics("riclpmsims.png")
+```
+
+Figure 2. Simulations reveal misspecification bias
+
+## [Results](https://jflournoy.github.io/lnt_pxvx/bivariate_LCMSR_models.html#parameter-estimates)
+
+_A lot_ of intercept-to-intercept correlations at p < .005. 
+
+For example, Agreeablness (and facet) intercepts negatively correlate with financial aspirations, materialism, unmitigated self-interest, and individualism.
+
+Lagged effects include
+- Mature Values $+ \rightarrow$ Openness 
+- Materialism  $- \rightarrow$ Social-self-regulation
+- Vertical Individualism $- \rightarrow$ Compassion, Politeness, Intellect, and O. 
+- Openness $\leftarrow - \rightarrow$ Verticle Individualism
+
+# Interim summary
+
+Model mis-specification can _easily_ lead one to make categorically incorrect decisions
