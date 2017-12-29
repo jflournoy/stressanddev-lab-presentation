@@ -41,7 +41,7 @@ Four projects (and what I've learned about doing science from some of them):
 3. The Yellow Light Game and adolescent risk-taking
 4. Measuring adolescent-developing motivations
 
-# Neural correlates of empathy-motivated prosocial behavior
+# Neural correlates of empathy-motivated prosocial behavior <small>([2016](https://dx.doi.org/10.17605/OSF.IO/RJH48))</small>
 
 Do individual differences in empathic concern predict future prosocial behavior? Is this mediated by "affective resonance" neural processes?
 
@@ -70,11 +70,15 @@ Two waves, only participants with fMRI at wave 1 & 2.
 >- fMRI during passive viewing of emotional faces (NimStim).
 >- Questionnaires
 
-## Measures
+## fMRI paradigm
+
+![Displays faces from NimStim for 2 seconds](facesparadigm.png)
+
+## Quesitonnaire Measures
 
 Measures of target constructs:
 
-- Interpersonal Reactivity Index (cite)
+- Interpersonal Reactivity Index (Davis, 1983)
     - Empathic Concern
     - Personal Distress
 - Questions from the 4-H Study of Positive Youth Development survey (Lerner et al., 2005)
@@ -85,14 +89,62 @@ daycare center, food shelf, youth program, community service agency, or doing ot
 
 ## Descriptives at a glance
 
+Table of Mean Scores (with Standard Deviation)
+
 ```{r}
 library(tidyverse)
 knitr::kable(
     tribble(
-        ~Wave, ~`Age Mean`, ~`(SD)`,
-        1, 10.1, '(.31)',
-        2, 13.1, '(.31)'
+        ~Wave, ~Age, ~`Empathic Concern`, ~`Personal Distress`, ~`Prosocial Behavior`,
+        1, '10.1 (.31)', '59.0 (13.3)', '45.1 (13.1)', '49.1 (16.2)',
+        2, '13.1 (.31)', '63.8 (12.9)', '39.7 (14.8)', '48.0 (18.2)'
         
     )
 )
 ```
+
+## Analyses
+
+![Diagram of proposed analyses](theoreticalmodel.png)
+
+## Results
+
+Empathic concern at age Wave 1 predicts prosocial behavior at wave 2
+
+$b = 0.44, t(51) = 2.42, p = .02$
+
+Empathic concern at wave 1 predicts neural response to faces at wave 2
+
+```{r, out.width = "400px"}
+knitr::include_graphics("fMRIresults.png")
+```
+
+## Results - Mediation
+
+IFG (peak at [-51, 20, 25]) mediates relation between wave 1 EC and wave 2 PSB
+
+$\Delta 1 \text{SD}_{\text{EC}} = \Delta 0.38 \text{SD}_{\text{PSB}}$
+
+Proportion of effect mediated = .51, p = .01.
+
+## Limitations
+
+or, what I've learned since then:
+
+1. AFNI's 3dClustSim was buggy (Eklund et al., 2016)
+2. Mediation is fraught (Bullock et al., 2010)
+    - [Simulations](https://jflournoy.github.io/2016/09/02/mediation_power/#misspecification): under DGM of three correlated variables with _no_ mediation, mediation models that _don't_ control for prior levels of both Y and M systematically show evidence of mediation. 
+    
+# Interactions between personality and values in adult development <small>(submitted)</small>
+
+Personality changes throughout adulthood. Do changes in values drive some of this change? How to best model these influences?
+
+## The study
+
+>- Cohort-sequential, 4 waves
+>- Nationally representative
+>- N = 879, 44% male, age 18&ndash;63, M = 36 (10.5)
+
+## Measures
+
+
