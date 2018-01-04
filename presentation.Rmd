@@ -5,6 +5,7 @@ date: "1/11/2018"
 output: 
   ioslides_presentation:
     incremental: true
+    widescreen: true
 ---
 
 ```{r setup, include=FALSE}
@@ -13,33 +14,38 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, error = FALSE, message = FA
 
 ## Introduction
 
-My work in graduate school has been diverse
+I'm a developmental social-personality cognitive neuroscientist.
 
-- Social 
-- Neuroscience
-- Development
-- Personality
+- Developmental Social Neuroscience Lab (Jennifer Pfeifer)
+- Personality and Social Dynamics Lab (Sanjay Srivastava)
 
 ## Interests
 
-My interests are both
+Developmental Social Neuroscience
 
-- Substantive
-    - Adolescent, motivated decision-making
-    - Development of stable individual differences
-- Methodological
-    - Cognitive models of behavior
-    - Refined models of development
-    - Emphasis on uncertainty
+- Adolescent development
+- Decision making & health risking behavior
+- Peer influences
+- Cognitive computational models
 
-## Projects
+Personality and Social Dynamics
 
-Four projects (and what I've learned about doing science from some of them):
+- Lifespan development
+- Within-person dynamics and changes
+- Semi-stable traits and behaviors
+- Measurement and longitudinal Modeling
+
+## Projects {.build}
+
+Brief discussion of project results and key methodological insights
 
 1. Neural correlates of empathy-motivated prosocial behavior
 2. Interactions between personality and values in adult development
 3. The Yellow Light Game and adolescent risk-taking
-4. Measuring adolescent-developing motivations
+
+Ongoing dissertation work
+
+- Measuring adolescent-developing motivations
 
 # Neural correlates of empathy-motivated prosocial behavior <small>([2016](https://dx.doi.org/10.17605/OSF.IO/RJH48))</small>
 
