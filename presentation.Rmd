@@ -178,13 +178,15 @@ Figure 2. Simulations reveal misspecification bias
 
 _A lot_ of intercept-to-intercept correlations at p < .005. 
 
-For example, Agreeablness (and facet) intercepts negatively correlate with financial aspirations, materialism, unmitigated self-interest, and individualism.
+For example, Agreeableness (and facet) intercepts negatively correlate with financial aspirations, materialism, unmitigated self-interest, and individualism.
 
 Lagged effects include
 - Mature Values $+ \rightarrow$ Openness 
 - Materialism  $- \rightarrow$ Social-self-regulation
 - Vertical Individualism $- \rightarrow$ Compassion, Politeness, Intellect, and O. 
-- Openness $\leftarrow - \rightarrow$ Verticle Individualism
+- Openness $\leftarrow - \rightarrow$ Vertical Individualism
+
+
 
 # Interim summary
 
