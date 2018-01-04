@@ -207,7 +207,9 @@ Bootstrapped, regularized partial-correlation networks and network statistics (u
 
 ## Centrality statistcs
 
+E.g., betweenness: how many shortest routes does a node sit on?
 
+![](betweenness.png)
 
 ## Advantages and pitfalls of the approach
 
