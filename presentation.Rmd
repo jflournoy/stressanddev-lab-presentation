@@ -266,7 +266,27 @@ Customizable. This version:
 
 ## Modeling questions
 
-Do participants 
+>- Does learning occur? 
+>- Does it follow reward-learning expectations? 
+>- What other behavior quirks?
+
+## Measurement questions
+
+>- Are individuals distinguishable?
+>- Do individual differences correspond to convergent measures?
+
+## Substantive questions
+
+>- Performance and motivation
+
+## Preliminary results
+
+- RW is not a good model
+- Participants tend to not like to make the same decision twice
+- Adolescents in this sample are risk-averse on average (to their detriment!)
+
+# Describing motivations
+
 
 
 My approach: How do the motivations behind "motivated adolescent behavior" change?
