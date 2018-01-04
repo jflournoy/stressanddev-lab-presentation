@@ -197,6 +197,7 @@ Lagged effects:
 
 - Massively bi-variate approach is lacking
 - Good recent work on psychological networks [[1](http://psych-networks.com/7-new-papers-network-replicability/), [2](http://sachaepskamp.com/Dissertation)]
+    - Tests idea that certain constructs (e.g., mental illness) are not best characterized by unitary latent causes.
 - Preliminary work on this data set is promising
 
 ## [Networks of personality](https://figshare.com/articles/A_Network_Approach_to_Characterizing_Personality_in_the_Life_and_Time_Longitudinal_Sample/1447279/2)
@@ -232,4 +233,43 @@ Claims about ties between nodes strengthened by
 
 # Interim summary
 
-Model mis-specification can _easily_ lead one to make categorically incorrect decisions
+Model misspecification can _easily_ lead one to make categorically incorrect decisions
+
+Different models can powerfully encode different hypotheses
+
+# Adolescent risk taking
+
+The big question: Why do negative health outcomes increase in adolescence?
+
+## Uncertain reward
+
+Focus on choosing risky rewards, and peer influences.
+
+Stoplight game.
+
+## Stoplight game
+
+- Neural correlates with convergent measures (e.g., sensation-seeking; CITE)
+- Behavior is ambiguous
+- Some problems
+    - Performance and risk choice (CITE)
+    - Different operationalizations of risk (CITE)
+    - Non-decisions (CITE)
+
+## The Yellow Light Game
+
+Customizable. This version:
+
+- Performance balanced between risk and safe options
+- Possible optimal mix of risk and non-risk
+- Decision is required
+
+## Modeling questions
+
+Do participants 
+
+
+My approach: How do the motivations behind "motivated adolescent behavior" change?
+
+
+
