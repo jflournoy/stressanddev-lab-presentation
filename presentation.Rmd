@@ -407,7 +407,7 @@ Two mutually reinforcing goals:
 
 [Demo](http://cas-arcs.uoregon.edu/IRB_SPLIT/)
 
-<img src='median_pr.png' style='max-width: 50%; border:0px' />
+<img src='median_pr.png' style='float:right; max-width: 50%; border:0px' />
 
 - Key parameter of interest: Model-estimated final probability of choosing an optimal response 
 - [Parameter Demo](https://jflournoy.shinyapps.io/rw_model/)
@@ -427,4 +427,4 @@ _NUMBERS ARE NOT RIGHT_
     - How to provide opportunities for socially-valued means?
 - Thwarted motives
     - Relation to stress
-    - Carver & Scheier <img src = 'https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjyw_yyxsHYAhXqlVQKHeJ8DuYQjRwIBw&url=http%3A%2F%2Fpsycnet.apa.org%2Ffulltext%2F2004-12159-001.html&psig=AOvVaw3tcegcSxDDc4sfHfu_h1_3&ust=1515266666892298' style = 'float:right; width: 50%' />
+    - Carver & Scheier <img src = 'carver.png' style = 'float:right; width: 50%' />
