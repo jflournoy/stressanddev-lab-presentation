@@ -10,6 +10,9 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, error = FALSE, message = FALSE)
+inv_logit <- function(x){
+    exp(x)/(1+exp(x))
+}
 ```
 
 ## Introduction
@@ -283,21 +286,29 @@ Customizable. This version:
 
 ## Modeling questions
 
->- Does learning occur?
->- Does it follow reward-learning expectations? 
->- What other behavior quirks?
->- Is learning or risk sensitive to peer manipulations?
-
-## Measurement questions
-
+>- Problems with simple bernoulli model?
 >- Are individuals distinguishable?
+>- Does learning occur?
+>- If so, does it follow reward-learning expectations? 
+>- Is learning or risk sensitive to peer manipulations?
 >- Do individual differences correspond to convergent measures?
+
+## Many data
+
+<img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/rawpropplot-1.png' style = 'width: 100%' />
 
 ## Preliminary results
 
-- RW is not better than logistic regression
-- Participants tend to not like to make the same decision twice
-- Adolescents in this sample are risk-averse on average (to their detriment!)
+- Participants tend not to make the same decision twice <img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/autocorrelationvisualization-1.png' style = 'width:35%; float:right' />
+- Are risk-averse on average,   
+`r paste(paste0(c('P(Go) = ', ' [', ', ', ']'), c(round(inv_logit(c(-0.39, -0.49, -0.28)),2), '')), collapse = '')`
+    - $P(\text{Go}_t | \text{Go}_{t-1}) = .32$, $P(\text{Go}_t | \text{Stop}_{t-1}) = .46$
+    - "Last choice" parameter increases ICC from .12 to .32
+- [RW](https://jflournoy.shinyapps.io/rw_model/) is not better than logistic regression <div style = 'float:right;width:60%'><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/unnamed-chunk-6-1.png' style = 'width: 50%' /><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/brmIxTypeppcheck-1.png' style = 'width: 50%' /></div>
+
+## Preliminary learning, condition
+
+
 
 # Describing motivations
 
