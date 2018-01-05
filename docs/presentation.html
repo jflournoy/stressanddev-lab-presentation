@@ -229,7 +229,7 @@
 
 </article></slide><slide class=""><hgroup><h2>Results</h2></hgroup><article  id="results">
 
-<p>Empathic concern at age Wave 1 predicts prosocial behavior at wave 2</p>
+<p>Empathic concern at wave 1 predicts prosocial behavior at wave 2</p>
 
 <p>\(b = 0.44, t(51) = 2.42, p = .02\)</p>
 
@@ -237,13 +237,17 @@
 
 <p><img src="fMRIresults.png" width="400px" /></p>
 
-</article></slide><slide class=""><hgroup><h2>Results - Mediation</h2></hgroup><article  id="results---mediation">
+</article></slide><slide class=""><hgroup><h2>Results - Mediation</h2></hgroup><article  id="results---mediation" class="build">
 
-<p>IFG (peak at [-51, 20, 25]) mediates relation between wave 1 EC and wave 2 PSB</p>
+<p>IFG (peak at [<a href='http://neurosynth.org/locations/?y=20&amp;x=-52&amp;z=26' title=''>-51, 20, 25</a>]) mediates relation between wave 1 EC and wave 2 PSB</p>
 
 <p>\(\Delta 1 \text{SD}_{\text{EC}} = \Delta 0.38 \text{SD}_{\text{PSB}}\)</p>
 
 <p>Proportion of effect mediated = .51, p = .01.</p>
+
+<p>lIFG: Language, cognitive control.</p>
+
+<p>Perhaps EC promotes PSB via linguistic processing of emotional cues.</p>
 
 </article></slide><slide class=""><hgroup><h2>Limitations</h2></hgroup><article  id="limitations">
 
@@ -254,7 +258,8 @@
 <li>Mediation is fraught (Bullock et al., 2010)
 
 <ul class = 'build'>
-<li><a href='https://jflournoy.github.io/2016/09/02/mediation_power/#misspecification' title=''>Simulations</a>: under DGM of three correlated variables with <em>no</em> mediation, mediation models that <em>don&#39;t</em> control for prior levels of both Y and M systematically show evidence of mediation.</li>
+<li><a href='https://jflournoy.github.io/2016/09/02/mediation_power/#misspecification' title=''>Simulations</a>: With data from three variables that are <em>only</em> correlated, mediation models that <em>don&#39;t</em> control for prior levels of both the outcome and mediator systematically show evidence of mediation.</li>
+<li>Even in longitudinal data, model-misspecification leads to eroneous conclusions.</li>
 </ul></li>
 </ol>
 
@@ -283,9 +288,9 @@
 <ul class = 'build'>
 <li>Mature values</li>
 <li>Unmitigated self interest</li>
-<li>materialism</li>
-<li>financial aspirations</li>
-<li>individualism &amp; collectivism</li>
+<li>Materialism</li>
+<li>Financial aspirations</li>
+<li>Individualism &amp; collectivism</li>
 </ul></li>
 </ul>
 
@@ -309,7 +314,7 @@
 
 <p><em>A lot</em> of intercept-to-intercept correlations at p &lt; .005.</p>
 
-<p>For example, Agreeableness (and facet) intercepts negatively correlate with financial aspirations, materialism, unmitigated self-interest, and individualism.</p>
+<p>For example, Agreeableness (and facets) intercept negatively correlate with financial aspirations, materialism, unmitigated self-interest, and individualism.</p>
 
 <p>Lagged effects:</p>
 
@@ -325,13 +330,14 @@
 <ul class = 'build'>
 <li>Evidence <em>against</em> essentialist trait perspective</li>
 <li>Culture shapes the person (possibly more at different ages)</li>
-<li>Much between &amp; within person correlation</li>
+<li>Primarily between-person correlation, so values perhaps not a robust route for culture</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Network Models</h2></hgroup><article  id="network-models">
+</article></slide><slide class=""><hgroup><h2>One step more to network Models</h2></hgroup><article  id="one-step-more-to-network-models">
 
 <ul class = 'build'>
-<li>Massively bi-variate approach is lacking</li>
+<li>Massively bi-variate approach is lacking &#8211; effects in isolation</li>
+<li>Imagine a web of cross-lagged effects between values and personality</li>
 <li>Good recent work on psychological networks [<a href='http://psych-networks.com/7-new-papers-network-replicability/' title=''>1</a>, <a href='http://sachaepskamp.com/Dissertation' title=''>2</a>]
 
 <ul class = 'build'>
@@ -380,6 +386,7 @@
 <li>Appropriate modeling of variance (e.g. LCM-SR, RI-CLPM)
 
 <ul class = 'build'>
+<li>Strengthens claim that effects are within-person</li>
 <li>Between-person correlations make bad edges</li>
 </ul></li>
 </ul>
@@ -398,11 +405,17 @@
 
 <p><img src='https://gitlab.com/jflournoy/Adolescent_Injury_Risk/raw/master/unintentional_injury_data_by_sex.png' width = 60% style='float:right' /> Focus on choosing risky rewards, and peer influences.</p>
 
-</article></slide><slide class=""><hgroup><h2>Stoplight game</h2></hgroup><article  id="stoplight-game">
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>3. The Yellow Light Game and adolescent risk-taking</h2></hgroup><article  id="the-yellow-light-game-and-adolescent-risk-taking">
+
+<p>Characterizing a laboratory task commonly used to investigage risk decisions.</p>
+
+</article></slide><slide class=""><hgroup><h2>Characterizing risk with Stoplight</h2></hgroup><article  id="characterizing-risk-with-stoplight">
+
+<p>The Stoplight Game (Steinberg et al, 2008) has been used in dozens of experiments.</p>
 
 <ul class = 'build'>
 <li>Neural correlates with convergent measures (e.g., sensation-seeking; Kahn et al., 2014)</li>
-<li>Small correlations with self report sensation seeking (~.2; Harden et al., 2017)</li>
+<li>Small correlations with self report sensation seeking (r=.2; Harden et al., 2017)</li>
 <li>Some problems
 
 <ul class = 'build'>
@@ -464,9 +477,14 @@
 <li>\(P(\text{Go}_t | \text{Go}_{t-1}) = .32\), \(P(\text{Go}_t | \text{Stop}_{t-1}) = .46\)</li>
 <li>&quot;Last choice&quot; parameter increases ICC from .12 to .32</li>
 </ul></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Reward-learning?</h2></hgroup><article  id="reward-learning">
+
+<ul class = 'build'>
 <li><a href='https://jflournoy.shinyapps.io/rw_model/' title=''>RW</a> is not better than logistic regression
 
-<div style="float:right;width:60%">
+<div style="float:right;width:100%">
 <img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/unnamed-chunk-6-1.png' style = 'width: 50%' /><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/brmIxTypeppcheck-1.png' style = 'width: 50%' /></div></li>
 </ul>
 

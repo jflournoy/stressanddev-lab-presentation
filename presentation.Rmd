@@ -120,7 +120,7 @@ knitr::kable(
 
 ## Results
 
-Empathic concern at age Wave 1 predicts prosocial behavior at wave 2
+Empathic concern at wave 1 predicts prosocial behavior at wave 2
 
 $b = 0.44, t(51) = 2.42, p = .02$
 
@@ -130,13 +130,17 @@ Empathic concern at wave 1 predicts neural response to faces at wave 2
 knitr::include_graphics("fMRIresults.png")
 ```
 
-## Results - Mediation
+## Results - Mediation {.build}
 
-IFG (peak at [-51, 20, 25]) mediates relation between wave 1 EC and wave 2 PSB
+IFG (peak at [[-51, 20, 25](http://neurosynth.org/locations/?y=20&x=-52&z=26)]) mediates relation between wave 1 EC and wave 2 PSB
 
 $\Delta 1 \text{SD}_{\text{EC}} = \Delta 0.38 \text{SD}_{\text{PSB}}$
 
 Proportion of effect mediated = .51, p = .01.
+
+lIFG: Language, cognitive control.
+
+Perhaps EC promotes PSB via linguistic processing of emotional cues.
 
 ## Limitations
 
@@ -144,7 +148,8 @@ or, what I've learned since then:
 
 1. AFNI's 3dClustSim was buggy (Eklund et al., 2016)
 2. Mediation is fraught (Bullock et al., 2010)
-    - [Simulations](https://jflournoy.github.io/2016/09/02/mediation_power/#misspecification): under DGM of three correlated variables with _no_ mediation, mediation models that _don't_ control for prior levels of both Y and M systematically show evidence of mediation. 
+    - [Simulations](https://jflournoy.github.io/2016/09/02/mediation_power/#misspecification): With data from three variables that are _only_ correlated, mediation models that _don't_ control for prior levels of both the outcome and mediator systematically show evidence of mediation.
+    - Even in longitudinal data, model-misspecification leads to eroneous conclusions.
     
 # Interactions between personality and values in adult development <small>(submitted)</small>
 
@@ -163,9 +168,9 @@ Personality changes throughout adulthood. Do changes in values drive some of thi
 - Values 
     - Mature values
     - Unmitigated self interest
-    - materialism
-    - financial aspirations
-    - individualism & collectivism
+    - Materialism
+    - Financial aspirations
+    - Individualism & collectivism
 
 ## Model for longitudinal change
 
@@ -189,7 +194,7 @@ Figure 2. Simulations reveal misspecification bias
 
 _A lot_ of intercept-to-intercept correlations at p < .005. 
 
-For example, Agreeableness (and facet) intercepts negatively correlate with financial aspirations, materialism, unmitigated self-interest, and individualism.
+For example, Agreeableness (and facets) intercept negatively correlate with financial aspirations, materialism, unmitigated self-interest, and individualism.
 
 Lagged effects:
 
@@ -202,11 +207,12 @@ Lagged effects:
 
 - Evidence _against_ essentialist trait perspective
 - Culture shapes the person (possibly more at different ages)
-- Much between & within person correlation
+- Primarily between-person correlation, so values perhaps not a robust route for culture
 
-## Network Models
+## One step more to network Models
 
-- Massively bi-variate approach is lacking
+- Massively bi-variate approach is lacking -- effects in isolation
+- Imagine a web of cross-lagged effects between values and personality
 - Good recent work on psychological networks [[1](http://psych-networks.com/7-new-papers-network-replicability/), [2](http://sachaepskamp.com/Dissertation)]
     - Tests idea that certain constructs (e.g., mental illness) are not best characterized by unitary latent causes.
 - Preliminary work on this data set is promising
@@ -240,6 +246,7 @@ Claims about ties between nodes strengthened by
 
 - High-frequency longitudinal data
 - Appropriate modeling of variance (e.g. LCM-SR, RI-CLPM)
+    - Strengthens claim that effects are within-person 
     - Between-person correlations make bad edges
 
 # Interim summary
@@ -257,10 +264,16 @@ The big question: Why do negative health outcomes increase in adolescence?
 <img src='https://gitlab.com/jflournoy/Adolescent_Injury_Risk/raw/master/unintentional_injury_data_by_sex.png' width = 60% style='float:right' />
 Focus on choosing risky rewards, and peer influences.
 
-## Stoplight game
+# 3. The Yellow Light Game and adolescent risk-taking
+
+Characterizing a laboratory task commonly used to investigage risk decisions.
+
+## Characterizing risk with Stoplight
+
+The Stoplight Game (Steinberg et al, 2008) has been used in dozens of experiments.
 
 - Neural correlates with convergent measures (e.g., sensation-seeking; Kahn et al., 2014)
-- Small correlations with self report sensation seeking (~.2; Harden et al., 2017)
+- Small correlations with self report sensation seeking (r=.2; Harden et al., 2017)
 - Some problems
     - Performance and risk choice (stop = -3s, EV go = -1.8s)
     - Different operationalizations of risk (prop "go" v. RT for "stop")
@@ -306,7 +319,10 @@ Customizable. This version:
 `r paste(paste0(c('P(Go) = ', ' [', ', ', ']'), c(round(inv_logit(c(-0.39, -0.49, -0.28)),2), '')), collapse = '')`
     - $P(\text{Go}_t | \text{Go}_{t-1}) = .32$, $P(\text{Go}_t | \text{Stop}_{t-1}) = .46$
     - "Last choice" parameter increases ICC from .12 to .32
-- [RW](https://jflournoy.shinyapps.io/rw_model/) is not better than logistic regression <div style = 'float:right;width:60%'><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/unnamed-chunk-6-1.png' style = 'width: 50%' /><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/brmIxTypeppcheck-1.png' style = 'width: 50%' /></div>
+    
+## Reward-learning?
+
+- [RW](https://jflournoy.shinyapps.io/rw_model/) is not better than logistic regression <div style = 'float:right;width:100%'><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/unnamed-chunk-6-1.png' style = 'width: 50%' /><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/brmIxTypeppcheck-1.png' style = 'width: 50%' /></div>
 
 ## Preliminary learning, condition
 
