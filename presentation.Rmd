@@ -249,45 +249,53 @@ The big question: Why do negative health outcomes increase in adolescence?
 
 ## Uncertain reward
 
+<img src='https://gitlab.com/jflournoy/Adolescent_Injury_Risk/raw/master/unintentional_injury_data_by_sex.png' width = 60% style='float:right' />
 Focus on choosing risky rewards, and peer influences.
-
-Stoplight game.
 
 ## Stoplight game
 
-- Neural correlates with convergent measures (e.g., sensation-seeking; CITE)
-- Behavior is ambiguous
+- Neural correlates with convergent measures (e.g., sensation-seeking; Kahn et al., 2014)
+- Small correlations with self report sensation seeking (~.2; Harden et al., 2017)
 - Some problems
-    - Performance and risk choice (CITE)
-    - Different operationalizations of risk (CITE)
-    - Non-decisions (CITE)
+    - Performance and risk choice (stop = -3s, EV go = -1.8s)
+    - Different operationalizations of risk (prop "go" v. RT for "stop")
+    - Non-decisions (button press for stop only)
+    - A lot of non-systematic variance, poor cor with other convergent measures (Harden, 2017)
 
 ## The Yellow Light Game
 
 Customizable. This version:
 
 - Performance balanced between risk and safe options
-- Possible optimal mix of risk and non-risk
 - Decision is required
+- Possible optimal mix of risk and non-risk
+- Distinguish propensity to choose risk option, and learning
+
+## Task description
+
+- 8 runs, 20 intersections per run
+- 3 Risk levels with different yellow light onsets
+    - 12 "middle" with P(crash | go) = .5
+    - 4 "late" with P(crash | go) = .25
+    - 4 "early" with P(crash | go) = .75
+- Run 5 and 6 (**peer**): watched by two "peers" via remote desktop after cyberball inclusion
+- Run 7 and 8 (**excl**): watched after being excluded in cyberball
 
 ## Modeling questions
 
->- Does learning occur? 
+>- Does learning occur?
 >- Does it follow reward-learning expectations? 
 >- What other behavior quirks?
+>- Is learning or risk sensitive to peer manipulations?
 
 ## Measurement questions
 
 >- Are individuals distinguishable?
 >- Do individual differences correspond to convergent measures?
 
-## Substantive questions
-
->- Performance and motivation
-
 ## Preliminary results
 
-- RW is not a good model
+- RW is not better than logistic regression
 - Participants tend to not like to make the same decision twice
 - Adolescents in this sample are risk-averse on average (to their detriment!)
 
