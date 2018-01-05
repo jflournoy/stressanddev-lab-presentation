@@ -394,9 +394,9 @@ Two mutually reinforcing goals:
 ## Aims
 
 - Aim 2: Does the motivational potentiation of learning relate to a constellation of self-report measures that theoretically ought to demonstrate convergence? Specifically, 
-    - (i) what is the relation between motivational potentiation and self-report fundamental social motives; 
-    - (ii) what is the relation between self-report fundamental social motives and motive-congruent outcomes; and 
-    - (iii) what is the relation between motivational potentiation and motive-congruent outcomes.
+    - \((i)\) what is the relation between motivational potentiation and self-report fundamental social motives; 
+    - \((ii)\) what is the relation between self-report fundamental social motives and motive-congruent outcomes; and 
+    - \((iii)\) what is the relation between motivational potentiation and motive-congruent outcomes.
 
 ## Aims
 
