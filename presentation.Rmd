@@ -6,6 +6,8 @@ output:
   ioslides_presentation:
     incremental: true
     widescreen: true
+    mathjax: local
+    self_contained: false
 ---
 
 ```{r setup, include=FALSE}
