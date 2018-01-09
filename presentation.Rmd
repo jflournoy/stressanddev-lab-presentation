@@ -24,233 +24,24 @@ I'm a developmental social-personality cognitive neuroscientist.
 - Developmental Social Neuroscience Lab (Jennifer Pfeifer)
 - Personality and Social Dynamics Lab (Sanjay Srivastava)
 
-## Interests
+## Motivating questions
 
-Developmental Social Neuroscience
+Why do we observe increases in negative health risk during Adolescence?
 
-- Adolescent development
-- Decision making & health risking behavior
-- Peer influences
-- Cognitive computational models
+Individual differences in tendencies of thoughts and behavior are _strategies_ that may serve to satisfy fundamental motivations.
 
-Personality and Social Dynamics
+Can we gain insight into the causes of adolescent risk-tolerance by taking an adaptive-functional approach, focusing on motives?
 
-- Lifespan development
-- Within-person dynamics and changes
-- Semi-stable traits and behaviors
-- Measurement and longitudinal Modeling
+## Methodological outlook
 
-## Projects {.build}
-
-Brief discussion of project results and key methodological insights
-
-1. Neural correlates of empathy-motivated prosocial behavior
-2. Interactions between personality and values in adult development
-3. The Yellow Light Game and adolescent risk-taking
-4. Ongoing dissertation: Measuring adolescent-developing motivations
-
-# 1. Neural correlates of empathy-motivated prosocial behavior <small>([2016](https://dx.doi.org/10.17605/OSF.IO/RJH48))</small>
-
-Do individual differences in empathic concern predict future prosocial behavior? Is this mediated by "affective resonance" neural processes?
-
-## Empathy and Prosocial Behavior
-
-*Empathic concern:* Sympathy, compassion; aligned emotions _for_ another person's suffering. 
-
-Evidence of association between EC and prosocial behavior throughout development (Barr & Higgins-D’Alessandro, 2007; Brownell et 
-al., 2013; Eisenberg, 2003; Eisenberg et al., 1991; Eisenberg et al., 1987; Farrant et
-al., 2012; 
-Litvack-Miller et al., 1997)
-
-## What reactive neural processes are involved?
-
-Empathic concern is an emotional reaction that will be activated by other people's emotional expressions.
-
-Given that a neural region is functionally active in response to other people's emotions, does that functional activation explain some of the link between EC and prosocial behavior?
-
-What does a particular region's involvement tell us about this link?
-
-## The study
-
-Two waves, only participants with fMRI at wave 1 & 2.
-
->- $N = 56 (N_{\text{male}} = 26$)
->- fMRI during passive viewing of emotional faces (NimStim).
->- Questionnaires
-
-## fMRI paradigm
-
-![Displays faces from NimStim for 2 seconds](facesparadigm.png)
-
-## Quesitonnaire Measures
-
-Measures of target constructs:
-
-- Interpersonal Reactivity Index (Davis, 1983)
-    - Empathic Concern
-    - Personal Distress
-- Questions from the 4-H Study of Positive Youth Development survey (Lerner et al., 2005)
-    - >During an average week, how many 
-hours do you spend helping other people without getting paid (such as helping out at a hospital, 
-daycare center, food shelf, youth program, community service agency, or doing other things)
-    - Item asking if they are often kind to other children.
-
-## Descriptives at a glance
-
-Table of Mean Scores (with Standard Deviation)
-
-```{r}
-library(tidyverse)
-knitr::kable(
-    tribble(
-        ~Wave, ~Age, ~`Empathic Concern`, ~`Personal Distress`, ~`Prosocial Behavior`,
-        1, '10.1 (.31)', '59.0 (13.3)', '45.1 (13.1)', '49.1 (16.2)',
-        2, '13.1 (.31)', '63.8 (12.9)', '39.7 (14.8)', '48.0 (18.2)'
-        
-    )
-)
-```
-
-## Analyses
-
-![Diagram of proposed analyses](theoreticalmodel.png)
-
-## Results
-
-Empathic concern at wave 1 predicts prosocial behavior at wave 2
-
-$b = 0.44, t(51) = 2.42, p = .02$
-
-Empathic concern at wave 1 predicts neural response to faces at wave 2
-
-```{r, out.width = "400px"}
-knitr::include_graphics("fMRIresults.png")
-```
-
-## Results - Mediation {.build}
-
-IFG (peak at [[-51, 20, 25](http://neurosynth.org/locations/?y=20&x=-52&z=26)]) mediates relation between wave 1 EC and wave 2 PSB
-
-$\Delta 1 \text{SD}_{\text{EC}} = \Delta 0.38 \text{SD}_{\text{PSB}}$
-
-Proportion of effect mediated = .51, p = .01.
-
-lIFG: Language, cognitive control.
-
-Perhaps EC promotes PSB via linguistic processing of emotional cues.
-
-## Limitations
-
-or, what I've learned since then:
-
-1. AFNI's 3dClustSim was buggy (Eklund et al., 2016)
-2. Mediation is fraught (Bullock et al., 2010)
-    - [Simulations](https://jflournoy.github.io/2016/09/02/mediation_power/#misspecification): With data from three variables that are _only_ correlated, mediation models that _don't_ control for prior levels of both the outcome and mediator systematically show evidence of mediation.
-    - Even in longitudinal data, model-misspecification leads to eroneous conclusions.
-    
-# 2. Interactions between personality and values in adult development <small>(submitted)</small>
-
-Personality changes throughout adulthood. Do changes in values drive some of this change? How to best model these influences?
-
-## The study
-
->- Cohort-sequential, 4 waves
->- Nationally representative
->- N = 879, 44% male, age 18&ndash;63, M = 36 (10.5)
-
-## Measures
-
-- Personality
-    - Big five, aspects, and super-factors
-- Values 
-    - Mature values
-    - Unmitigated self interest
-    - Materialism
-    - Financial aspirations
-    - Individualism & collectivism
-
-## Model for longitudinal change
-
-Cross-lagged panel model, but _better_:
-
-<big>The Latent Curve Model with Structured Residuals</big> (LCM-SR; Curran et al., 2013)
-
-![Growth curve with cross lagged residuals](lcmsr.png)
-
-## Why not cross-lagged panel models?
-
-Models need to account for both between- and within-person variance or risk extreme bias (Hamaker et al., 2015).
-
-```{r, out.width = "350px"}
-knitr::include_graphics("riclpmsims.png")
-```
-
-Figure 2. Simulations reveal misspecification bias
-
-## [Results](https://jflournoy.github.io/lnt_pxvx/bivariate_LCMSR_models.html#parameter-estimates)
-
-_A lot_ of intercept-to-intercept correlations at p < .005. 
-
-For example, Agreeableness (and facets) intercept negatively correlate with financial aspirations, materialism, unmitigated self-interest, and individualism.
-
-Lagged effects:
-
-- Mature Values $+ \rightarrow$ Openness 
-- Materialism  $- \rightarrow$ Social-self-regulation
-- Vertical Individualism $- \rightarrow$ Compassion, Politeness, Intellect, and Openness. 
-- Openness $\leftarrow - \rightarrow$ Vertical Individualism
-
-## Substantive takeaway
-
-- Evidence _against_ essentialist trait perspective
-- Culture shapes the person (possibly more at different ages)
-- Primarily between-person correlation, so values perhaps not a robust route for culture
-
-## One step more to network Models
-
-- Massively bi-variate approach is lacking -- effects in isolation
-- Imagine a web of cross-lagged effects between values and personality
-- Good recent work on psychological networks [[1](http://psych-networks.com/7-new-papers-network-replicability/), [2](http://sachaepskamp.com/Dissertation)]
-    - Tests idea that certain constructs (e.g., mental illness) are not best characterized by unitary latent causes.
-- Preliminary work on this data set is promising
-
-## [Networks of personality](https://figshare.com/articles/A_Network_Approach_to_Characterizing_Personality_in_the_Life_and_Time_Longitudinal_Sample/1447279/2)
-
-Bootstrapped, regularized partial-correlation networks and network statistics (using UO high-performance computing cluster)
-
-![](personality_network.png)
-
-## Centrality statistcs
-
-E.g., betweenness: how many shortest routes does a node sit on?
-
-![](betweenness.png)
-
-## Advantages and pitfalls of the approach
-
-- The strength: 
-    - Rich characterization of mediating relations
-    - Characterize propagation
-    - Modularity without unknown causes
-- The pitfalls: 
-    - Mediation 
-    - Unclear how to characterize uncertainty
-    - Each node is a construct (with measurement issues)
-
-## Future directions
-
-Claims about ties between nodes strengthened by
-
-- High-frequency longitudinal data
-- Appropriate modeling of variance (e.g. LCM-SR, RI-CLPM)
-    - Strengthens claim that effects are within-person 
-    - Between-person correlations make bad edges
-
-# Interim summary
-
-Model misspecification can _easily_ lead one to make categorically incorrect decisions
-
-Different models can powerfully encode different hypotheses
+- Modeling development (adolescence, adulthood)
+    - Models encode hypotheses
+        - Networks versus latent variables ([Network model of personality](https://figshare.com/articles/A_Network_Approach_to_Characterizing_Personality_in_the_Life_and_Time_Longitudinal_Sample/1447279/2))
+        - Distinguishing sources of variance ([RI-CLPM](https://jflournoy.github.io/2017/10/20/riclpm-lavaan-demo/), LCM-SR)
+- Modeling behavior
+    - Models give access to important components
+        - Increases in between-person relative to total variance (YLG)
+        - Allow measurement of latent process (SPLT)
 
 # Adolescent risk taking
 
@@ -259,69 +50,107 @@ The big question: Why do negative health outcomes increase in adolescence?
 ## Uncertain reward
 
 <img src='https://gitlab.com/jflournoy/Adolescent_Injury_Risk/raw/master/unintentional_injury_data_by_sex.png' width = 60% style='float:right' />
-Focus on choosing risky rewards, and peer influences.
+
+- Increases in unintentional injury
+- ... alcohol and drug abuse (Hooshmand, Willoughby, & Good, 2012)
+- ... risky sexual behavior (Stevenson, Zimmerman, & Caldwell, 2007)
+
+## Reward sensitivity
+
+Focus on 
+- Reward sensitivity
+- Risk tolerance
+- Peer influences (CITE Casey, Pfeifer, Harden, Steinberg).
 
 # 3. The Yellow Light Game and adolescent risk-taking
 
-Characterizing a laboratory task commonly used to investigage risk decisions.
+Characterizing a laboratory task commonly used to investigate risk decisions.
 
 ## Characterizing risk with Stoplight
 
-The Stoplight Game (Steinberg et al, 2008) has been used in dozens of experiments.
+The Stoplight Game (Steinberg et al, 2008) has been used in dozens of experiments as a measure of risk tolerance with the expectation of reward receipt
 
-- Neural correlates with convergent measures (e.g., sensation-seeking; Kahn et al., 2014)
+- Game-elicited neural activity correlates with convergent measures (e.g., sensation-seeking; Kahn et al., 2014)
 - Small correlations with self report sensation seeking (r=.2; Harden et al., 2017)
-- Some problems
-    - Performance and risk choice (stop = -3s, EV go = -1.8s)
-    - Different operationalizations of risk (prop "go" v. RT for "stop")
-    - Non-decisions (button press for stop only)
-    - A lot of non-systematic variance, poor cor with other convergent measures (Harden, 2017)
+- Some sources of variance in task behavior are unlcear
+    - Risk decision also increases task performance (stop = -3s, EV go = -1.8s)
+    - Most variance is not shared with convergent measures (Harden et al, 2017)
 
-## The Yellow Light Game
+## The psychometric properties of Stoplight
 
-The [YLG](https://dsn.uoregon.edu/research/yellow-light-game/) software is Customizable. This version:
+[Harden et al. 2017](https://doi.org/10.1016/j.dcn.2016.12.007): 398 twins, 4 factors capture variance of a wide range of cognitive control and incentive processing tasks 
 
-- Performance balanced between risk and safe options
-- Decision is required
-- Possible optimal mix of risk and non-risk
+- Reward-seeking factor loadings
+
+        IGT: Good decks           0.56
+        IGT: Bad decks            0.22
+        Delay Discounting         0.15
+        BART: Avg. adjusted pumps 0.47
+        Stoplight: intersections  0.32	
+        Sensation seeking         0.16
+- Proportion variance: Genetic = .66, Non-shared = .34
+- 78% of Stoplight *unique* variance: non-shared env + measurement error
+
+## Aims
+
+1. Increase precision of task design
+2. Improve evidential value through modeling
+
+## Aim 1: Task design improvements
+
+[The Yellow Light Game](https://dsn.uoregon.edu/research/yellow-light-game/) software is Customizable. This version:
+
 - Distinguish propensity to choose risk option, and learning
+- Performance increase requires learning
+- Performance insensitive to overall proportion of risk choice
 
 ## Task description
 
+<img src = 'stoplight.jpg' style = 'width: 50%; float: right' />
+
 - 8 runs, 20 intersections per run
 - 3 Risk levels with different yellow light onsets
-    - 12 "middle" with P(crash | go) = .5
-    - 4 "late" with P(crash | go) = .25
-    - 4 "early" with P(crash | go) = .75
+    - 12 "middle" P(crash) = .5
+    - 4 "late" P(crash) = .25
+    - 4 "early" P(crash) = .75
 - Run 5 and 6 (**peer**): watched by two "peers" via remote desktop after cyberball inclusion
 - Run 7 and 8 (**excl**): watched after being excluded in cyberball
 
-## Modeling questions
+## Aim 2: Modeling improvements
 
->- Problems with simple bernoulli model?
->- Are individuals distinguishable?
->- Does learning occur?
->- If so, does it follow reward-learning expectations? 
->- Is learning or risk sensitive to peer manipulations?
->- Do individual differences correspond to convergent measures?
+a. Can we improve between-person proportion of variance?
+b. Can we distinguish risk-tolerance from learning?
+    - ... and are there differences in peer effects across parameters?
+d. How do these modeling choices affect convergent correlations?
 
-## Many data
+## The data to model
 
-All analyses in R package: [`ylglearning`](https://jflournoy.github.io/ylglearning/)
+N = 174, all analyses available in R package: [`ylglearning`](https://jflournoy.github.io/ylglearning/)
 
 <img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/rawpropplot-1.png' style = 'width: 100%' />
 
-## Preliminary results
+## 2a. Improve between-person variance
 
-- Participants tend not to make the same decision twice <img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/autocorrelationvisualization-1.png' style = 'width:35%; float:right' />
-- Are risk-averse on average,   
-`r paste(paste0(c('P(Go) = ', ' [', ', ', ']'), c(round(inv_logit(c(-0.39, -0.49, -0.28)),2), '')), collapse = '')`
-    - $P(\text{Go}_t | \text{Go}_{t-1}) = .32$, $P(\text{Go}_t | \text{Stop}_{t-1}) = .46$
-    - "Last choice" parameter increases ICC from .12 to .32
-    
-## Reward-learning?
+Logistic regression captures the common measure of simple proportion of non-stop intersections.
 
-- [RW](https://jflournoy.shinyapps.io/rw_model/) is not better than logistic regression <div style = 'float:right;width:100%'><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/unnamed-chunk-6-1.png' style = 'width: 50%' /><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/brmIxTypeppcheck-1.png' style = 'width: 50%' /></div>
+ICC<sub>pGo</sub> = [0.12](https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics.html#task-reliability)
+
+This could be one explanation for the somewhat small correlations in the literature.
+
+## 2a. Diagnosing this low ICC
+
+Structure of task behavior: is using simple bernoulli process not appropriate?  
+
+- Participants tend not to make the same decision twice <img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/autocorrelationvisualization-1.png' style = 'width:50%; float:right' />
+- "Last decision 'Go'?" parameter increases ICC from **.12 to .32**
+- But now we have two variables to interpret!
+
+## 2a. Reward-learning?
+
+- [Rescorla-Wagner](https://jflournoy.shinyapps.io/rw_model/) (left) is not better than logistic regression (right) <div style = 'float:right;width:100%'><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/unnamed-chunk-6-1.png' style = 'width: 50%' /><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/brmIxTypeppcheck-1.png' style = 'width: 50%' /></div>
+
+## 2b. Distinguish risk tolerance and learning
+
 
 ## Evidence of learning
 
@@ -428,3 +257,43 @@ _NUMBERS ARE NOT RIGHT_
 - Thwarted motives
     - Relation to stress
     - Carver & Scheier <img src = 'carver.png' style = 'float:right; width: 50%' />
+
+# Thank you!
+
+For the opportunity to share this talk with you...
+
+# This slide intentionally left blank
+
+# Extras
+
+## [Network model of personality](https://figshare.com/articles/A_Network_Approach_to_Characterizing_Personality_in_the_Life_and_Time_Longitudinal_Sample/1447279/2))
+
+Bootstrapped, regularized partial-correlation networks and network statistics (using UO high-performance computing cluster)
+
+![](personality_network.png)
+
+## Centrality statistcs
+
+E.g., betweenness: how many shortest routes does a node sit on?
+
+![](betweenness.png)
+
+## Advantages and pitfalls of the approach
+
+- The strength: 
+    - Rich characterization of mediating relations
+    - Characterize propagation
+    - Modularity without unknown causes
+- The pitfalls: 
+    - Mediation 
+    - Unclear how to characterize uncertainty
+    - Each node is a construct (with measurement issues)
+
+## Future directions
+
+Claims about ties between nodes strengthened by
+
+- High-frequency longitudinal data
+- Appropriate modeling of variance (e.g. LCM-SR, RI-CLPM)
+    - Strengthens claim that effects are within-person 
+    - Between-person correlations make bad edges
