@@ -17,37 +17,28 @@ inv_logit <- function(x){
 }
 ```
 
-## Introduction
 
-I'm a developmental social-personality cognitive neuroscientist.
-
-- Developmental Social Neuroscience Lab (Jennifer Pfeifer)
-- Personality and Social Dynamics Lab (Sanjay Srivastava)
-
-## Motivating questions
+## Problems I focus on {.build}
 
 Why do we observe increases in negative health risk during Adolescence?
 
-Individual differences in tendencies of thoughts and behavior are _strategies_ that may serve to satisfy fundamental motivations.
+Can we gain insight into the causes of adolescent risk-tolerance by If we understand individual differences in thought and behavior as _strategies_ for satisfying fundamental motivations?
 
-Can we gain insight into the causes of adolescent risk-tolerance by taking an adaptive-functional approach, focusing on motives?
-
-## Methodological outlook
+## Methodological approaches
 
 - Modeling development (adolescence, adulthood)
     - Models encode hypotheses
         - Networks versus latent variables ([Network model of personality](https://figshare.com/articles/A_Network_Approach_to_Characterizing_Personality_in_the_Life_and_Time_Longitudinal_Sample/1447279/2))
         - Distinguishing sources of variance ([RI-CLPM](https://jflournoy.github.io/2017/10/20/riclpm-lavaan-demo/), LCM-SR)
 - Modeling behavior
-    - Models give access to important components
-        - Increases in between-person relative to total variance (YLG)
-        - Allow measurement of latent process (SPLT)
+    - Increase reliability of individual differences in behavior (Yellow Light Game)
+    - Allow measurement of latent process (Social Probabilistic Learning Task)
 
-# Adolescent risk taking
+# Adolescent risk taking {.build}
 
 The big question: Why do negative health outcomes increase in adolescence?
 
-## Uncertain reward
+## Negative health outcomes and health risking behavior
 
 <img src='https://gitlab.com/jflournoy/Adolescent_Injury_Risk/raw/master/unintentional_injury_data_by_sex.png' width = 60% style='float:right' />
 
@@ -55,64 +46,67 @@ The big question: Why do negative health outcomes increase in adolescence?
 - ... alcohol and drug abuse (Hooshmand, Willoughby, & Good, 2012)
 - ... risky sexual behavior (Stevenson, Zimmerman, & Caldwell, 2007)
 
-## Reward sensitivity
+## Changes in risk and reward processing
 
-Focus on 
-- Reward sensitivity
-- Risk tolerance
-- Peer influences (CITE Casey, Pfeifer, Harden, Steinberg).
+Explanations focus on 
 
-# 3. The Yellow Light Game and adolescent risk-taking
+- Reward sensitivity during risky choices (e.g., Casey, 2015)
+- ... in peer contexts (e.g., Peake et al., 2013, Silva et al., 2016).
 
-Characterizing a laboratory task commonly used to investigate risk decisions.
+# The Yellow Light Game {.build}
 
-## Characterizing risk with Stoplight
+Characterizing a laboratory paradigm commonly used to investigate risk decisions.
 
-The Stoplight Game (Steinberg et al, 2008) has been used in dozens of experiments as a measure of risk tolerance with the expectation of reward receipt
+## The Stoplight Game
 
-- Game-elicited neural activity correlates with convergent measures (e.g., sensation-seeking; Kahn et al., 2014)
-- Small correlations with self report sensation seeking (r=.2; Harden et al., 2017)
-- Some sources of variance in task behavior are unlcear
-    - Risk decision also increases task performance (stop = -3s, EV go = -1.8s)
+The Stoplight Game (Steinberg et al, 2008) has been used in dozens of experiments as a measure of risk-taking 
+
+- Small correlations with self report sensation seeking (r=.2; Harden et al., 2017; Steinberg et al. 2008)
+- Game-elicited neural response correlates with convergent measures (Kahn et al., 2014)
+- However, some aspects of this task remain unclear
+    - Making a risky choice also increases task performance (stop = -3s, EV of go = -1.8s)
     - Most variance is not shared with convergent measures (Harden et al, 2017)
 
 ## The psychometric properties of Stoplight
 
 [Harden et al. 2017](https://doi.org/10.1016/j.dcn.2016.12.007): 398 twins, 4 factors capture variance of a wide range of cognitive control and incentive processing tasks 
 
-- Reward-seeking factor loadings
+- Reward-seeking factor loadings (A = .66, E = .34)
 
+        Stoplight: intersections  0.32
         IGT: Good decks           0.56
         IGT: Bad decks            0.22
         Delay Discounting         0.15
-        BART: Avg. adjusted pumps 0.47
-        Stoplight: intersections  0.32	
+        BART: Avg. adjusted pumps 0.47	
         Sensation seeking         0.16
-- Proportion variance: Genetic = .66, Non-shared = .34
-- 78% of Stoplight *unique* variance: non-shared env + measurement error
+- Stoplight *unique* variance: 78% is non-shared env + measurement error
+- A lot of unaccounted for variance
 
-## Aims
+## Aims of the Yellow Light Game study
 
 1. Increase precision of task design
-2. Improve evidential value through modeling
+2. Through modeling, Improve relaibility
 
 ## Aim 1: Task design improvements
 
-[The Yellow Light Game](https://dsn.uoregon.edu/research/yellow-light-game/) software is Customizable. This version:
+[The Yellow Light Game](https://dsn.uoregon.edu/research/yellow-light-game/) software is Customizable. 
 
-- Distinguish propensity to choose risk option, and learning
-- Performance increase requires learning
+In the configuration for this study:
+
+- We can distinguish propensity to choose risk option, and learning
 - Performance insensitive to overall proportion of risk choice
+- But one can learn to increase performance
 
-## Task description
+## YLG Task Protocol description
 
 <img src = 'stoplight.jpg' style = 'width: 50%; float: right' />
 
-- 8 runs, 20 intersections per run
-- 3 Risk levels with different yellow light onsets
+- Each intersection has 1 of 3 risk levels 
+- Risk levels correspond to different yellow light onsets
     - 12 "middle" P(crash) = .5
     - 4 "late" P(crash) = .25
     - 4 "early" P(crash) = .75
+- Driving simulation, 8 runs, 20 intersections per run
 - Run 5 and 6 (**peer**): watched by two "peers" via remote desktop after cyberball inclusion
 - Run 7 and 8 (**excl**): watched after being excluded in cyberball
 
