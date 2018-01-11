@@ -20,7 +20,7 @@ inv_logit <- function(x){
 
 ## Problems I focus on {.build}
 
-Why do we observe increases in negative health risk during Adolescence?
+Why do we observe increases in negative health risk during adolescence?
 
 Can we gain insight into the causes of adolescent risk-tolerance by If we understand individual differences in thought and behavior as _strategies_ for satisfying fundamental motivations?
 
@@ -85,11 +85,11 @@ The Stoplight Game (Steinberg et al, 2008) has been used in dozens of experiment
 ## Aims of the Yellow Light Game study
 
 1. Increase precision of task design
-2. Through modeling, Improve relaibility
+2. Through modeling, Improve reliability
 
 ## Aim 1: Task design improvements
 
-[The Yellow Light Game](https://dsn.uoregon.edu/research/yellow-light-game/) software is Customizable. 
+[The Yellow Light Game](https://dsn.uoregon.edu/research/yellow-light-game/) software is customization. 
 
 In the configuration for this study:
 
@@ -97,31 +97,35 @@ In the configuration for this study:
 - Performance insensitive to overall proportion of risk choice
 - But one can learn to increase performance
 
-## YLG Task Protocol description
+## YLG Task & Protocol description
 
 <img src = 'stoplight.jpg' style = 'width: 50%; float: right' />
 
+Driving simulation
+
 - Each intersection has 1 of 3 risk levels 
 - Risk levels correspond to different yellow light onsets
-    - 12 "middle" P(crash) = .5
-    - 4 "late" P(crash) = .25
     - 4 "early" P(crash) = .75
-- Driving simulation, 8 runs, 20 intersections per run
+    - 4 "late" P(crash) = .25
+    - 12 "middle" P(crash) = .5
+- 8 runs, 20 intersections per run
 - Run 5 and 6 (**peer**): watched by two "peers" via remote desktop after cyberball inclusion
 - Run 7 and 8 (**excl**): watched after being excluded in cyberball
 
-## Aim 2: Modeling improvements
-
-a. Can we improve between-person proportion of variance?
-b. Can we distinguish risk-tolerance from learning?
-    - ... and are there differences in peer effects across parameters?
-c. How do these modeling choices affect convergent correlations?
-
 ## The data to model
 
-N = 174, all analyses available in R package: [`ylglearning`](https://jflournoy.github.io/ylglearning/)
+N = 174, 84 boys (Age M = 14.3 [11-17]) 
 
-<img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/rawpropplot-1.png' style = 'width: 100%' />
+<img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/rawpropplot-1.png' style = 'width: 70%;' />
+
+All analyses available in R package: [`ylglearning`](https://jflournoy.github.io/ylglearning/)
+
+## Aim 2: Through modeling, Improve relaibility
+
+- $a$. Can we improve between-person proportion of variance?
+- $b$. Can we distinguish risk-tolerance from learning?
+    - ... and are there differences in peer effects across parameters?
+- $c$. How do these modeling choices affect convergent correlations?
 
 ## 2a. Improve between-person variance
 
@@ -133,7 +137,7 @@ This could be one explanation for the somewhat small correlations in the literat
 
 ## 2a. Diagnosing this low ICC
 
-Structure of task behavior: is using simple bernoulli process not appropriate?  
+Structure of task behavior: is using simple Bernoulli process not appropriate?  
 
 - Participants tend not to make the same decision twice <img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/autocorrelationvisualization-1.png' style = 'width:50%; float:right' />
 - "Last decision 'Go'?" parameter increases ICC from **.12 to .32**

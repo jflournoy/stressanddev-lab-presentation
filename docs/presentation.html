@@ -99,7 +99,7 @@
 
 <slide class=""><hgroup><h2>Problems I focus on</h2></hgroup><article  id="problems-i-focus-on" class="build">
 
-<p>Why do we observe increases in negative health risk during Adolescence?</p>
+<p>Why do we observe increases in negative health risk during adolescence?</p>
 
 <p>Can we gain insight into the causes of adolescent risk-tolerance by If we understand individual differences in thought and behavior as <em>strategies</em> for satisfying fundamental motivations?</p>
 
@@ -187,12 +187,12 @@ Sensation seeking         0.16</pre></li>
 
 <ol class = 'build'>
 <li>Increase precision of task design</li>
-<li>Through modeling, Improve relaibility</li>
+<li>Through modeling, Improve reliability</li>
 </ol>
 
 </article></slide><slide class=""><hgroup><h2>Aim 1: Task design improvements</h2></hgroup><article  id="aim-1-task-design-improvements">
 
-<p><a href='https://dsn.uoregon.edu/research/yellow-light-game/' title=''>The Yellow Light Game</a> software is Customizable.</p>
+<p><a href='https://dsn.uoregon.edu/research/yellow-light-game/' title=''>The Yellow Light Game</a> software is customization.</p>
 
 <p>In the configuration for this study:</p>
 
@@ -202,41 +202,45 @@ Sensation seeking         0.16</pre></li>
 <li>But one can learn to increase performance</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>YLG Task Protocol description</h2></hgroup><article  id="ylg-task-protocol-description">
+</article></slide><slide class=""><hgroup><h2>YLG Task &amp; Protocol description</h2></hgroup><article  id="ylg-task-protocol-description">
 
 <p><img src = 'stoplight.jpg' style = 'width: 50%; float: right' /></p>
+
+<p>Driving simulation</p>
 
 <ul class = 'build'>
 <li>Each intersection has 1 of 3 risk levels</li>
 <li>Risk levels correspond to different yellow light onsets
 
 <ul class = 'build'>
-<li>12 &quot;middle&quot; P(crash) = .5</li>
-<li>4 &quot;late&quot; P(crash) = .25</li>
 <li>4 &quot;early&quot; P(crash) = .75</li>
+<li>4 &quot;late&quot; P(crash) = .25</li>
+<li>12 &quot;middle&quot; P(crash) = .5</li>
 </ul></li>
-<li>Driving simulation, 8 runs, 20 intersections per run</li>
+<li>8 runs, 20 intersections per run</li>
 <li>Run 5 and 6 (<strong>peer</strong>): watched by two &quot;peers&quot; via remote desktop after cyberball inclusion</li>
 <li>Run 7 and 8 (<strong>excl</strong>): watched after being excluded in cyberball</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Aim 2: Modeling improvements</h2></hgroup><article  id="aim-2-modeling-improvements">
+</article></slide><slide class=""><hgroup><h2>The data to model</h2></hgroup><article  id="the-data-to-model">
 
-<ol class = 'build'>
-<li>Can we improve between-person proportion of variance?</li>
-<li>Can we distinguish risk-tolerance from learning?
+<p>N = 174, 84 boys (Age M = 14.3 [11-17])</p>
+
+<p><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/rawpropplot-1.png' style = 'width: 70%;' /></p>
+
+<p>All analyses available in R package: <a href='https://jflournoy.github.io/ylglearning/' title=''><code>ylglearning</code></a></p>
+
+</article></slide><slide class=""><hgroup><h2>Aim 2: Through modeling, Improve relaibility</h2></hgroup><article  id="aim-2-through-modeling-improve-relaibility">
+
+<ul class = 'build'>
+<li>\(a\). Can we improve between-person proportion of variance?</li>
+<li>\(b\). Can we distinguish risk-tolerance from learning?
 
 <ul class = 'build'>
 <li>&#8230; and are there differences in peer effects across parameters?</li>
 </ul></li>
-<li>How do these modeling choices affect convergent correlations?</li>
-</ol>
-
-</article></slide><slide class=""><hgroup><h2>The data to model</h2></hgroup><article  id="the-data-to-model">
-
-<p>N = 174, all analyses available in R package: <a href='https://jflournoy.github.io/ylglearning/' title=''><code>ylglearning</code></a></p>
-
-<p><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/rawpropplot-1.png' style = 'width: 100%' /></p>
+<li>\(c\). How do these modeling choices affect convergent correlations?</li>
+</ul>
 
 </article></slide><slide class=""><hgroup><h2>2a. Improve between-person variance</h2></hgroup><article  id="a.-improve-between-person-variance">
 
@@ -248,7 +252,7 @@ Sensation seeking         0.16</pre></li>
 
 </article></slide><slide class=""><hgroup><h2>2a. Diagnosing this low ICC</h2></hgroup><article  id="a.-diagnosing-this-low-icc">
 
-<p>Structure of task behavior: is using simple bernoulli process not appropriate?</p>
+<p>Structure of task behavior: is using simple Bernoulli process not appropriate?</p>
 
 <ul class = 'build'>
 <li>Participants tend not to make the same decision twice <img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/autocorrelationvisualization-1.png' style = 'width:50%; float:right' /></li>
