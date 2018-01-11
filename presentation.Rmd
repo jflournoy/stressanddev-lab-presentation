@@ -18,11 +18,13 @@ inv_logit <- function(x){
 ```
 
 
-## Problems I focus on {.build}
+## A big question, and approach {.build}
 
 Why do we observe increases in negative health risk during adolescence?
 
-Can we gain insight into the causes of adolescent risk-taking by If we understand individual differences in thought and behavior as _strategies_ for satisfying fundamental motivations?
+Can we gain insight into the causes of adolescent risk-taking ...
+
+... if we understand individual differences in thought and behavior as _strategies_ for satisfying fundamental motivations?
 
 ## Methodological approaches
 
