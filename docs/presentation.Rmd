@@ -124,7 +124,7 @@ All analyses available in R package: [`ylglearning`](https://jflournoy.github.io
 
 ## Aim 2: Improve task characterization of risk taking
 
-- $a$. Can we mprove amount of between-person proportion of variance?
+- $a$. Can we improve the between-person proportion of variance?
 - $b$. Can we distinguish risk-taking from learning?
     - ... and are there differences across peer conditions?
 - $c$. Does a better model improve correlations with a convergent measure?
@@ -151,7 +151,7 @@ Is a simple Bernoulli process not appropriate? Structure of task behavior may be
 
 - [Reward-learning model](https://jflournoy.shinyapps.io/rw_model/) (left) is not better than logistic regression (right) <div style = 'float:right;width:100%'><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/unnamed-chunk-6-1.png' style = 'width: 50%' /><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/brmIxTypeppcheck-1.png' style = 'width: 50%' /></div>
 
-## 2a. Conclusion
+## 2a. Conclusion: improving between person variance
 
 Yes, accounting for more complicated task-behavior structure improves reliability (with a possible loss of interpretability). 
 
@@ -159,7 +159,7 @@ Yes, accounting for more complicated task-behavior structure improves reliabilit
 
 <img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_questionnaire_analyses_files/figure-html/plotfittedpreds-1.png' style = 'width: 95%' />
 
-## 2b. Conclusion {.build}
+## 2b. Conclusion: learning versus risk {.build}
 
 There are some differences in behavior between "learnable" intersections that might indicate learning.
 
@@ -167,25 +167,27 @@ Evidence for risk-taking increases for the "middle" (non-learnable) intersection
 
 **Task behavior is more complex than we may have appreciated.**
 
-## 2c. Improve correlations with a convergent measure
+## 2c. Improve correlations with a convergent measure {.build}
 
 Reliability is a precondition for correlation
+
 - In this model, [63%](https://jflournoy.github.io/ylglearning/articles/ylg_questionnaire_analyses.html) of the variance is between-person.
 
 Assess improvement by comparing parameters during _Alone_ condition
+
     - Simple proportions model: P(Go)
     - Full model: P(Go|stop)<sub>M</sub>, P(Go|Go)<sub>M</sub>
     - Self-report sensation seeking from the UPPS-P (Cyders et al., 2007; Whiteside & Lynam, 2001).
 
-## 2c. Intercorrelatoins 
+## 2c. Intercorrelations 
 
 <span style = 'font-size: .6em'>(Probabilities transformed with normal quantile function)</span>
 
 |    | 1. Sensation Seeking    | 2. P(Go)  | 3. P(Go\|Stop)| 4. P(Go\|Go)  | 5. Age    |
-|---:|---------:|----------:|--------------:|--------------:|----------:|
-| **2. P(Go)**       |  <span style='font-size:1.2em;font-style:bold'>0.13</span>    |  |  |  |  |
-| **3. P(Go\|Stop)** |  <span style='font-size:1.2em;font-style:bold'>0.17</span>    |   0.91    |  |  |  |
-| 4.P(Go\|Go)        |  0.08     |   0.79    |     0.57      |  |  |
+|:---|---------:|----------:|--------------:|--------------:|----------:|
+| **2. Simple: P(Go)**       |  <span style='font-size:1.2em;font-style:bold'>0.13</span>    |  |  |  |  |
+| **3. Full: P(Go\|Stop)** |  <span style='font-size:1.2em;font-style:bold'>0.17</span>    |   0.91    |  |  |  |
+| 4.Full: P(Go\|Go)        |  0.08     |   0.79    |     0.57      |  |  |
 | 5. Age             | -0.05     |  -0.02    |    -0.07      |  0.06         |  |
 | 6. Sex             | -0.11     |  -0.07    |    -0.07      |  0.01         |   0.20    |
 
@@ -209,7 +211,7 @@ _r_<sub>SS.P(Go|Stop)</sub> = .17 [.02, .31]
 - More fine-grained task modeling improves correlations with convergent measures.
     - This implies that the task is measuring more than just risk
     - But also adds support for being able to generalize the part that _is_ about risk-taking
-- Potentially some differences on average in learning motivation _and_ risk-taking in different peer experiences
+- Potentially some differences on average in learning motivation _and_ risk-taking in different peer contexts
     - Possibly modulated by individual differences
     - Which we can now more precisely assess!
     - But why? To what end?
@@ -219,3 +221,4 @@ _r_<sub>SS.P(Go|Stop)</sub> = .17 [.02, .31]
 For the opportunity to share this talk with you...
 
 # This slide intentionally left blank
+
