@@ -155,7 +155,7 @@ Is a simple Bernoulli process not appropriate? Structure of task behavior may be
 
 Yes, accounting for more complicated task-behavior structure improves reliability (with a possible loss of interpretability). 
 
-## 2b. Distinguish learning and risk tolerance
+## 2b. Distinguish learning and risk-taking
 
 <img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_questionnaire_analyses_files/figure-html/plotfittedpreds-1.png' style = 'width: 95%' />
 
@@ -175,13 +175,11 @@ Reliability is a precondition for correlation
 
 Assess improvement by comparing parameters during _Alone_ condition
 
-    - Simple proportions model: P(Go)
-    - Full model: P(Go|stop)<sub>M</sub>, P(Go|Go)<sub>M</sub>
-    - Self-report sensation seeking from the UPPS-P (Cyders et al., 2007; Whiteside & Lynam, 2001).
+- Simple proportions model: P(Go)
+- Full model: P(Go|stop)<sub>M</sub>, P(Go|Go)<sub>M</sub>
+- Self-report sensation seeking from the UPPS-P (Cyders et al., 2007; Whiteside & Lynam, 2001).
 
 ## 2c. Intercorrelations 
-
-<span style = 'font-size: .6em'>(Probabilities transformed with normal quantile function)</span>
 
 |    | 1. Sensation Seeking    | 2. P(Go)  | 3. P(Go\|Stop)| 4. P(Go\|Go)  | 5. Age    |
 |:---|---------:|----------:|--------------:|--------------:|----------:|
@@ -196,14 +194,14 @@ Assess improvement by comparing parameters during _Alone_ condition
 
 ## 2c. Implications for power
 
-_r_<sub>SS.P(Go)</sub> = .13 [-.01, .28]
+_r_<sub>SS.P(Go)</sub> = .13, CI<sub>95%</sub> = [-.01, .28]
 
-_r_<sub>SS.P(Go|Stop)</sub> = .17 [.02, .31]
+_r_<sub>SS.P(Go|Stop)</sub> = .17, CI<sub>95%</sub> = [.02, .31]
 
 |                   | _r_<sub>SS.P(Go)</sub>    | _r_<sub>SS.P(Go\|Stop)</sub>  | Difference    |
 |               ----|                       ---:|                           ---:|           ---:|
-|   Obsv Power      |           42%             |           61%                 |   20%         |
-| N (Power = 80%)   |           428             |           265                 |   163 (62%)   |
+|   Observed Power      |           42%             |           61%                 |   20%         |
+| N for Power = 80%   |           428             |           265                 |   163 (62%)   |
 
 
 ## Conclusions
@@ -211,7 +209,7 @@ _r_<sub>SS.P(Go|Stop)</sub> = .17 [.02, .31]
 - More fine-grained task modeling improves correlations with convergent measures.
     - This implies that the task is measuring more than just risk
     - But also adds support for being able to generalize the part that _is_ about risk-taking
-- Potentially some differences on average in learning motivation _and_ risk-taking in different peer contexts
+- Possibly some differences on average in learning motivation _and_ risk-taking in different peer contexts
     - Possibly modulated by individual differences
     - Which we can now more precisely assess!
     - But why? To what end?
