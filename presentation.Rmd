@@ -22,7 +22,7 @@ inv_logit <- function(x){
 
 Why do we observe increases in negative health risk during adolescence?
 
-Can we gain insight into the causes of adolescent risk-tolerance by If we understand individual differences in thought and behavior as _strategies_ for satisfying fundamental motivations?
+Can we gain insight into the causes of adolescent risk-taking by If we understand individual differences in thought and behavior as _strategies_ for satisfying fundamental motivations?
 
 ## Methodological approaches
 
@@ -85,7 +85,7 @@ The Stoplight Game (Steinberg et al, 2008) has been used in dozens of experiment
 ## Aims of the Yellow Light Game study
 
 1. Increase precision of task design
-2. Through modeling, Improve reliability
+2. Improve task characterization of risk taking
 
 ## Aim 1: Task design improvements
 
@@ -120,16 +120,18 @@ N = 174, 84 boys (Age M = 14.3 [11-17])
 
 All analyses available in R package: [`ylglearning`](https://jflournoy.github.io/ylglearning/)
 
-## Aim 2: Through modeling, Improve relaibility
+## Aim 2: Improve task characterization of risk taking
 
-- $a$. Can we improve between-person proportion of variance?
-- $b$. Can we distinguish risk-tolerance from learning?
-    - ... and are there differences in peer effects across parameters?
-- $c$. How do these modeling choices affect convergent correlations?
+- $a$. Can we mprove amount of between-person proportion of variance?
+- $b$. Can we distinguish risk-taking from learning?
+    - ... and are there differences across peer conditions?
+- $c$. Does a better model improve correlations with a convergent measure?
 
-## 2a. Improve between-person variance
+## 2a. Improve between-person variance {.build}
 
-Logistic regression captures the common measure of simple proportion of non-stop intersections.
+Proportion of "Go" decisions is the most common summary used.
+
+Intercept-only multi-level logistic regression is basically equivalent to this.
 
 ICC<sub>pGo</sub> = [0.12](https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics.html#task-reliability)
 
@@ -137,15 +139,15 @@ This could be one explanation for the somewhat small correlations in the literat
 
 ## 2a. Diagnosing this low ICC
 
-Structure of task behavior: is using simple Bernoulli process not appropriate?  
+Is a simple Bernoulli process not appropriate? Structure of task behavior may be more complex.  
 
 - Participants tend not to make the same decision twice <img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_descriptives_and_diagnostics_files/figure-html/autocorrelationvisualization-1.png' style = 'width:50%; float:right' />
-- "Last decision 'Go'?" parameter increases ICC from **.12 to .32**
+- "Last decision was 'Go'?" parameter increases ICC from **.12 to .32**
 - But now we have two variables to interpret!
 
 ## 2a. Reward-learning?
 
-- [Rescorla-Wagner](https://jflournoy.shinyapps.io/rw_model/) (left) is not better than logistic regression (right) <div style = 'float:right;width:100%'><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/unnamed-chunk-6-1.png' style = 'width: 50%' /><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/brmIxTypeppcheck-1.png' style = 'width: 50%' /></div>
+- [Reward-learning model](https://jflournoy.shinyapps.io/rw_model/) (left) is not better than logistic regression (right) <div style = 'float:right;width:100%'><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/unnamed-chunk-6-1.png' style = 'width: 50%' /><img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_expanding_the_logistic_model_files/figure-html/brmIxTypeppcheck-1.png' style = 'width: 50%' /></div>
 
 ## 2a. Conclusion
 
@@ -155,43 +157,35 @@ Yes, accounting for more complicated task-behavior structure improves reliabilit
 
 <img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_questionnaire_analyses_files/figure-html/plotfittedpreds-1.png' style = 'width: 95%' />
 
-## 2b. Distinguish learning and risk tolerance
-
-<img src = 'https://jflournoy.github.io/ylglearning/articles/ylg_questionnaire_analyses_files/figure-html/plotfittedpreds-2.png' style = 'width: 95%' />
-
 ## 2b. Conclusion {.build}
 
-There are some differences in behavior between "learnable" intersections.
+There are some differences in behavior between "learnable" intersections that might indicate learning.
 
-Learning especially for late-onset intersections. 
-
-Evidence for risk-tolerance increases for "Go"-after-"Go" non-learnable intersections.
+Evidence for risk-taking increases for the "middle" (non-learnable) intersections.
 
 **Task behavior is more complex than we may have appreciated.**
 
-## 2c. Convergent relations between Sensation seeking and "Go" behavior
+## 2c. Improve correlations with a convergent measure
 
-In this model, [63%](https://jflournoy.github.io/ylglearning/articles/ylg_questionnaire_analyses.html) of the variance is between-person.
+Reliability is a precondition for correlation
+- In this model, [63%](https://jflournoy.github.io/ylglearning/articles/ylg_questionnaire_analyses.html) of the variance is between-person.
 
-Does modeling make a difference?
-
-Compare parameters during _Alone_ condition
-
-- Simple proportions model: P(Go)
-- Full mode: P(Go|stop)<sub>M</sub>, P(Go|Go)<sub>M</sub>
-- Self-report sensation seeking from the UPPS-P (Cyders et al., 2007; Whiteside & Lynam, 2001).
+Assess improvement by comparing parameters during _Alone_ condition
+    - Simple proportions model: P(Go)
+    - Full model: P(Go|stop)<sub>M</sub>, P(Go|Go)<sub>M</sub>
+    - Self-report sensation seeking from the UPPS-P (Cyders et al., 2007; Whiteside & Lynam, 2001).
 
 ## 2c. Intercorrelatoins 
 
 <span style = 'font-size: .6em'>(Probabilities transformed with normal quantile function)</span>
 
-|    | 1. SS    | 2. P(Go)  | 3. P(Go\|Stop)| 4. P(Go\|Go)  | 5. Age    | 6. Sex    |
-|---:|---------:|----------:|--------------:|--------------:|----------:|----------:|
-| **2.** |  <span style='font-size:1.2em'>0.13</span>    |   1.00    |     0.91      |  0.79         |  -0.02    |   -0.07   |
-| **3.** |  <span style='font-size:1.2em'>0.17</span>    |   0.91    |     1.00      |  0.57         |  -0.07    |   -0.07   |
-| 4. |  0.08    |   0.79    |     0.57      |  1.00         |   0.06    |    0.01   |
-| 5. | -0.05    |  -0.02    |    -0.07      |  0.06         |   1.00    |    0.20   |
-| 6. | -0.11    |  -0.07    |    -0.07      |  0.01         |   0.20    |    1.00   |
+|    | 1. Sensation Seeking    | 2. P(Go)  | 3. P(Go\|Stop)| 4. P(Go\|Go)  | 5. Age    |
+|---:|---------:|----------:|--------------:|--------------:|----------:|
+| **2. P(Go)**       |  <span style='font-size:1.2em;font-style:bold'>0.13</span>    |  |  |  |  |
+| **3. P(Go\|Stop)** |  <span style='font-size:1.2em;font-style:bold'>0.17</span>    |   0.91    |  |  |  |
+| 4.P(Go\|Go)        |  0.08     |   0.79    |     0.57      |  |  |
+| 5. Age             | -0.05     |  -0.02    |    -0.07      |  0.06         |  |
+| 6. Sex             | -0.11     |  -0.07    |    -0.07      |  0.01         |   0.20    |
 
 - P(Go|Stop) > P(Go) (_ns_, t = -1.12, p < .26)
 - Regressions controlling for age and sex much the same 
@@ -210,179 +204,16 @@ _r_<sub>SS.P(Go|Stop)</sub> = .17 [.02, .31]
 
 ## Conclusions
 
-- Is learning motivation _and_ risk tolerance modulated by peer experiences?
-    - Why? To what end?
-- Does more fine-grained task modeling improve correlations with convergent measures?
-    - If so, does this allow us to better generalize this task as a measurement of reward-seeking or risk tolerance?
-
-# 4. Measuring adolescent-developing motivations
-
-My approach: How do the motivations behind "motivated adolescent behavior" change?
-
-## Why motivation? {.build}
-
-Many have argued that adolescent changes in reward seeking and risk tolerance may be adaptive:
-
->- Detachment from family
->- Exploration of environment
-
-Why?
-
-## Motives and goals matter
-
-Understanding function of changes in reward processing is necessary for complete description of its consequences:
-
-- Health risking behavior
-- Psychopathology?
-
-## Function matters for intervention
-
-- Interventions that satisfice motives will be more successful (Ellis et al, 2014)
-- Motives guide perception and selection of opportunities for behavior
-    - That is, motives help us understand _what might have value_
-
-## Adolescent developing motives
-
-- Two prominent motives: Status, Mate-seeking
-- Fundamental Social Motives captures these 
-- Research is either absent or self-report
-- Need for new measurement
-
-## Reinforcement learning paradigm
-
-- Behavioral
-- Mechanistic
-- Motivational potentiation of learning
-
-## Dissertation Goals
-
-Two mutually reinforcing goals:
-
-1. Preliminary validation of learning task as measure of motives (and motive effects on learning)
-2. Exploration of links between multiple measures of motives, related constructs, and outcomes
-
-## Aims
-
-- Aim 1a: Does framing reinforcement learning with (mate-seeking and status) motivational contexts potentiate learning?
-- Aim 1b: How does motivational potentiation of learning covary with development?
-
-## Aims
-
-- Aim 2: Does the motivational potentiation of learning relate to a constellation of self-report measures that theoretically ought to demonstrate convergence? Specifically, 
-    - \((i)\) what is the relation between motivational potentiation and self-report fundamental social motives; 
-    - \((ii)\) what is the relation between self-report fundamental social motives and motive-congruent outcomes; and 
-    - \((iii)\) what is the relation between motivational potentiation and motive-congruent outcomes.
-
-## Aims
-
-- Aim 3a: Do close others perceive individual differences in motives that are reflected in motivational learning potentiation?
-- Aim 3b: Is there agreement between close others and the self in perceptions of fundamental social motives?
-
-## Social Probabilistic Learning Task
-
-[Demo](http://cas-arcs.uoregon.edu/IRB_SPLIT/)
-
-<img src='median_pr.png' style='float:right; max-width: 50%; border:0px' />
-
-- Key parameter of interest: Model-estimated final probability of choosing an optimal response 
-- [Parameter Demo](https://jflournoy.shinyapps.io/rw_model/)
-
-## Progress
-
-_NUMBERS ARE NOT RIGHT_
-
->- N<sub>Adol</sub> = 100
->- N<sub>Coll</sub> = 167
->- N<sub>Inf</sub> = 200
-
-## Future directions
-
-- Connecting motives to means
-    - How does exploitation of opportunities reveal motives?
-    - How to provide opportunities for socially-valued means?
-- Thwarted motives
-    - Relation to stress
-    - Carver & Scheier <img src = 'carver.png' style = 'float:right; width: 50%' />
+- More fine-grained task modeling improves correlations with convergent measures.
+    - This implies that the task is measuring more than just risk
+    - But also adds support for being able to generalize the part that _is_ about risk-taking
+- Potentially some differences on average in learning motivation _and_ risk-taking in different peer experiences
+    - Possibly modulated by individual differences
+    - Which we can now more precisely assess!
+    - But why? To what end?
 
 # Thank you!
 
 For the opportunity to share this talk with you...
 
 # This slide intentionally left blank
-
-# YLG Statistics
-
-## 2b. The numbers: Alone
-
-Reference Categories: Alone, Middle, Go | Stop
-
-| Parameter                             | Estimate | l-95% CI | u-95% CI |
-|---------------------------------------|---------:|---------:|---------:|
-| Middle<sub>Go\|Stop</sub>             |    -0.08 |    -0.24 |     0.08 |
-| Middle<sub>Go\|Go</sub>               |**-0.83** |    -1.01 |    -0.65 |
-| Early<sub>go\|stop</sub>              |**-0.17** |    -0.31 |    -0.03 |
-| Late<sub>go\|stop</sub>               | **0.19** |     0.03 |     0.36 |
-| Early<sub>go\|go</sub>                | **0.06** |    -0.16 |     0.28 |
-| Late<sub>go\|go</sub>                 |**-0.24** |    -0.48 |    -0.01 |
-
-## 2b. The numbers: Peer 
-
-Reference condition: Alone, Middle, Go | Stop
-
-| Parameter                             | Estimate | l-95% CI | u-95% CI |
-|---------------------------------------|---------:|---------:|---------:|
-| Middle<sub>Go\|Stop</sub>             |    -0.05 |    -0.19 |     0.08 |
-| Middle<sub>Go\|Go</sub>               |     0.18 |    -0.03 |     0.38 |
-| Early<sub>Go\|Stop</sub>              |     0.06 |    -0.17 |     0.28 |
-| Late<sub>Go\|Stop</sub>               |    -0.20 |    -0.43 |     0.03 |
-| Early<sub>go\|go</sub>                |     0.00 |    -0.39 |     0.38 |
-| Late<sub>go\|go</sub>                 |     0.29 |    -0.13 |     0.68 |
-
-## 2b. The numbers: Exclusion 
-
-Reference condition: Alone, Middle, Go | Stop
-
-| Parameter                             | Estimate | l-95% CI | u-95% CI |
-|---------------------------------------|---------:|---------:|---------:|
-| Middle<sub>go\|stop</sub>             |    -0.10 |    -0.26 |     0.07 |
-| Middle<sub>Go\|Go</sub>               | **0.40** |     0.14 |     0.64 |
-| Early<sub>Go\|Stop</sub>              |     0.00 |    -0.23 |     0.23 |
-| Late<sub>Go\|Stop</sub>               |    -0.15 |    -0.39 |     0.08 |
-| Early<sub>go\|go</sub>                |    -0.23 |    -0.62 |     0.14 |
-| Late<sub>go\|go</sub>                 |     0.34 |    -0.05 |     0.72 |
-
-
-
-# Extras
-
-## [Network model of personality](https://figshare.com/articles/A_Network_Approach_to_Characterizing_Personality_in_the_Life_and_Time_Longitudinal_Sample/1447279/2))
-
-Bootstrapped, regularized partial-correlation networks and network statistics (using UO high-performance computing cluster)
-
-![](personality_network.png)
-
-## Centrality statistcs
-
-E.g., betweenness: how many shortest routes does a node sit on?
-
-![](betweenness.png)
-
-## Advantages and pitfalls of the approach
-
-- The strength: 
-    - Rich characterization of mediating relations
-    - Characterize propagation
-    - Modularity without unknown causes
-- The pitfalls: 
-    - Mediation 
-    - Unclear how to characterize uncertainty
-    - Each node is a construct (with measurement issues)
-
-## Future directions
-
-Claims about ties between nodes strengthened by
-
-- High-frequency longitudinal data
-- Appropriate modeling of variance (e.g. LCM-SR, RI-CLPM)
-    - Strengthens claim that effects are within-person 
-    - Between-person correlations make bad edges
