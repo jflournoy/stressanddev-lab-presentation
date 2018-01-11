@@ -1,0 +1,185 @@
+---
+title: "Extra slides? You shouldn't have!"
+author: "John Flournoy"
+date: "1/11/2018"
+output: 
+  ioslides_presentation:
+    incremental: true
+    widescreen: true
+    mathjax: local
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, error = FALSE, message = FALSE)
+inv_logit <- function(x){
+    exp(x)/(1+exp(x))
+}
+```
+
+# YLG Statistics
+
+## 2b. The numbers: Alone
+
+Reference Categories: Alone, Middle, Go | Stop
+
+| Parameter                             | Estimate | l-95% CI | u-95% CI |
+|---------------------------------------|---------:|---------:|---------:|
+| Middle<sub>Go\|Stop</sub>             |    -0.08 |    -0.24 |     0.08 |
+| Middle<sub>Go\|Go</sub>               |**-0.83** |    -1.01 |    -0.65 |
+| Early<sub>go\|stop</sub>              |**-0.17** |    -0.31 |    -0.03 |
+| Late<sub>go\|stop</sub>               | **0.19** |     0.03 |     0.36 |
+| Early<sub>go\|go</sub>                | **0.06** |    -0.16 |     0.28 |
+| Late<sub>go\|go</sub>                 |**-0.24** |    -0.48 |    -0.01 |
+
+## 2b. The numbers: Peer 
+
+Reference condition: Alone, Middle, Go | Stop
+
+| Parameter                             | Estimate | l-95% CI | u-95% CI |
+|---------------------------------------|---------:|---------:|---------:|
+| Middle<sub>Go\|Stop</sub>             |    -0.05 |    -0.19 |     0.08 |
+| Middle<sub>Go\|Go</sub>               |     0.18 |    -0.03 |     0.38 |
+| Early<sub>Go\|Stop</sub>              |     0.06 |    -0.17 |     0.28 |
+| Late<sub>Go\|Stop</sub>               |    -0.20 |    -0.43 |     0.03 |
+| Early<sub>go\|go</sub>                |     0.00 |    -0.39 |     0.38 |
+| Late<sub>go\|go</sub>                 |     0.29 |    -0.13 |     0.68 |
+
+## 2b. The numbers: Exclusion 
+
+Reference condition: Alone, Middle, Go | Stop
+
+| Parameter                             | Estimate | l-95% CI | u-95% CI |
+|---------------------------------------|---------:|---------:|---------:|
+| Middle<sub>go\|stop</sub>             |    -0.10 |    -0.26 |     0.07 |
+| Middle<sub>Go\|Go</sub>               | **0.40** |     0.14 |     0.64 |
+| Early<sub>Go\|Stop</sub>              |     0.00 |    -0.23 |     0.23 |
+| Late<sub>Go\|Stop</sub>               |    -0.15 |    -0.39 |     0.08 |
+| Early<sub>go\|go</sub>                |    -0.23 |    -0.62 |     0.14 |
+| Late<sub>go\|go</sub>                 |     0.34 |    -0.05 |     0.72 |
+
+
+
+# 4. Measuring adolescent-developing motivations
+
+My approach: How do the motivations behind "motivated adolescent behavior" change?
+
+## Why motivation? {.build}
+
+Many have argued that adolescent changes in reward seeking and risk tolerance may be adaptive:
+
+>- Detachment from family
+>- Exploration of environment
+
+Why?
+
+## Motives and goals matter
+
+Understanding function of changes in reward processing is necessary for complete description of its consequences:
+
+- Health risking behavior
+- Psychopathology?
+
+## Function matters for intervention
+
+- Interventions that satisfice motives will be more successful (Ellis et al, 2014)
+- Motives guide perception and selection of opportunities for behavior
+    - That is, motives help us understand _what might have value_
+
+## Adolescent developing motives
+
+- Two prominent motives: Status, Mate-seeking
+- Fundamental Social Motives captures these 
+- Research is either absent or self-report
+- Need for new measurement
+
+## Reinforcement learning paradigm
+
+- Behavioral
+- Mechanistic
+- Motivational potentiation of learning
+
+## Dissertation Goals
+
+Two mutually reinforcing goals:
+
+1. Preliminary validation of learning task as measure of motives (and motive effects on learning)
+2. Exploration of links between multiple measures of motives, related constructs, and outcomes
+
+## Aims
+
+- Aim 1a: Does framing reinforcement learning with (mate-seeking and status) motivational contexts potentiate learning?
+- Aim 1b: How does motivational potentiation of learning covary with development?
+
+## Aims
+
+- Aim 2: Does the motivational potentiation of learning relate to a constellation of self-report measures that theoretically ought to demonstrate convergence? Specifically, 
+    - \((i)\) what is the relation between motivational potentiation and self-report fundamental social motives; 
+    - \((ii)\) what is the relation between self-report fundamental social motives and motive-congruent outcomes; and 
+    - \((iii)\) what is the relation between motivational potentiation and motive-congruent outcomes.
+
+## Aims
+
+- Aim 3a: Do close others perceive individual differences in motives that are reflected in motivational learning potentiation?
+- Aim 3b: Is there agreement between close others and the self in perceptions of fundamental social motives?
+
+## Social Probabilistic Learning Task
+
+[Demo](http://cas-arcs.uoregon.edu/IRB_SPLIT/)
+
+<img src='median_pr.png' style='float:right; max-width: 50%; border:0px' />
+
+- Key parameter of interest: Model-estimated final probability of choosing an optimal response 
+- [Parameter Demo](https://jflournoy.shinyapps.io/rw_model/)
+
+## Progress
+
+_NUMBERS ARE NOT RIGHT_
+
+>- N<sub>Adol</sub> = 100
+>- N<sub>Coll</sub> = 167
+>- N<sub>Inf</sub> = 200
+
+## Future directions
+
+- Connecting motives to means
+    - How does exploitation of opportunities reveal motives?
+    - How to provide opportunities for socially-valued means?
+- Thwarted motives
+    - Relation to stress
+    - Carver & Scheier <img src = 'carver.png' style = 'float:right; width: 50%' />
+
+
+# Extras
+
+## [Network model of personality](https://figshare.com/articles/A_Network_Approach_to_Characterizing_Personality_in_the_Life_and_Time_Longitudinal_Sample/1447279/2))
+
+Bootstrapped, regularized partial-correlation networks and network statistics (using UO high-performance computing cluster)
+
+![](personality_network.png)
+
+## Centrality statistcs
+
+E.g., betweenness: how many shortest routes does a node sit on?
+
+![](betweenness.png)
+
+## Advantages and pitfalls of the approach
+
+- The strength: 
+    - Rich characterization of mediating relations
+    - Characterize propagation
+    - Modularity without unknown causes
+- The pitfalls: 
+    - Mediation 
+    - Unclear how to characterize uncertainty
+    - Each node is a construct (with measurement issues)
+
+## Future directions
+
+Claims about ties between nodes strengthened by
+
+- High-frequency longitudinal data
+- Appropriate modeling of variance (e.g. LCM-SR, RI-CLPM)
+    - Strengthens claim that effects are within-person 
+    - Between-person correlations make bad edges
